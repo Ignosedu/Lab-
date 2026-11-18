@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QHOF — User Profile</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+  <div class="app-window">
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Сайдбар -->
+    <aside class="sidebar" id="sidebar">
+      <div class="logo-container">
+        <div class="logo">QHOF</div>
+        <button class="close-sidebar-btn" id="closeSidebarBtn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="sidebar-divider"></div>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i><span>Home</span></a>
+        <a href="library.html" class="nav-link"><i class="fa-solid fa-layer-group"></i><span>Library</span></a>
+        <a href="store.html" class="nav-link"><i class="fa-solid fa-store"></i><span>Store</span></a>
+        <a href="wishlist.html" class="nav-link"><i class="fa-solid fa-heart"></i><span>Wishlist</span></a>
+        <a href="bootstrap.html" class="nav-link bootstrap-link"><i class="fa-brands fa-bootstrap"></i><span>Bootstrap Page</span></a>
+      </nav>
+
+      <div class="sidebar-divider"></div>
+      <nav class="nav-menu">
+        <a href="#" class="nav-link"><i class="fa-solid fa-percent"></i><span>Discount</span></a>
+        <a href="#" class="nav-link"><i class="fa-solid fa-wallet"></i><span>Wallet | $20.00</span></a>
+      </nav>
+      <div class="sidebar-divider"></div>
+      <div class="sidebar-footer">
+        <a href="#" class="nav-link"><i class="fa-solid fa-comments"></i><span>Friends & Chat</span></a>
+      </div>
+    </aside>
+
+    <!-- Основна частина профілю -->
+    <main class="main-content">
+      <header class="top-bar">
+        <button class="mobile-menu-toggle" id="mobileMenuToggle"><i class="fa-solid fa-bars"></i></button>
+        
+        <div class="search-container">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" placeholder="Type to search" class="search-input">
+        </div>
+
+        <!-- Кнопку Sign In прибрано -->
+        <div class="user-actions">
+          <button class="action-btn" aria-label="Cart"></button>
+          <button class="action-btn" aria-label="Notifications"></button>
+          <div class="user-avatar" title="View Profile"></div>
+        </div>
+      </header>
+
+      <!-- Шапка профілю (Banner & Avatar) -->
+      <section class="profile-hero-card">
+        <div class="profile-cover"></div>
+        <div class="profile-header-info">
+          <div class="profile-avatar-wrapper">
+            <div class="profile-avatar-lg"></div>
+            <span class="status-online-dot"></span>
+          </div>
+          <div class="profile-text-details">
+            <div class="profile-name-row">
+              <h2>Alex "CyberKnight" Vance</h2>
+              <span class="user-level-badge">LVL 42</span>
+            </div>
+            <p class="profile-bio">Passionate PC gamer & achievement hunter. Currently playing Planet of Lana! 🚀</p>
+          </div>
+          <button class="btn-edit-profile" onclick="alert('Profile Settings coming soon!')">
+            <i class="fa-solid fa-pen-to-square"></i> Edit Profile
+          </button>
+        </div>
+      </section>
+
+      <!-- Статистика користувача -->
+      <section class="profile-stats-grid">
+        <div class="stat-card">
+          <i class="fa-solid fa-gamepad stat-icon"></i>
+          <div>
+            <h3>12</h3>
+            <p>Games Owned</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <i class="fa-solid fa-trophy stat-icon"></i>
+          <div>
+            <h3>148</h3>
+            <p>Achievements</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <i class="fa-solid fa-user-group stat-icon"></i>
+          <div>
+            <h3>24</h3>
+            <p>Friends Online</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <i class="fa-solid fa-clock stat-icon"></i>
+          <div>
+            <h3>342h</h3>
+            <p>Playtime Total</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Блок активності та досягнень -->
+      <div class="game-details-grid">
+        <div class="game-main-info">
+          <section class="content-box">
+            <h2 class="box-title"><i class="fa-solid fa-bolt"></i> Recent Activity</h2>
+            <div class="activity-item">
+              <img src="assets/images/pol.png" alt="Planet of Lana" class="activity-thumb">
+              <div class="activity-info">
+                <h4>Planet of Lana</h4>
+                <p>Played 2.5 hours yesterday • Unlocked achievement "Machine Whisperer"</p>
+              </div>
+              <span class="activity-time">Yesterday</span>
+            </div>
+            <div class="activity-item">
+              <img src="assets/images/spider.png" alt="Spider-Man" class="activity-thumb">
+              <div class="activity-info">
+                <h4>Spider-Man: Miles Morales</h4>
+                <p>Completed main story mission • 100% Venom Skill Tree</p>
+              </div>
+              <span class="activity-time">3 days ago</span>
+            </div>
+          </section>
+        </div>
+
+        <div class="game-sidebar-info">
+          <section class="content-box">
+            <h2 class="box-title"><i class="fa-solid fa-award"></i> Featured Badges</h2>
+            <div class="badges-grid">
+              <div class="badge-item" title="Early Adopter"><i class="fa-solid fa-rocket"></i></div>
+              <div class="badge-item" title="Master Collector"><i class="fa-solid fa-crown"></i></div>
+              <div class="badge-item" title="Top Reviewer"><i class="fa-solid fa-star"></i></div>
+              <div class="badge-item" title="Beta Tester"><i class="fa-solid fa-bug"></i></div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

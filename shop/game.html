@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QHOF — Game Details</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body id="gamePageBody">
+
+  <div class="app-window">
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="logo-container">
+        <div class="logo">QHOF</div>
+        <button class="close-sidebar-btn" id="closeSidebarBtn" aria-label="Close menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      
+      <div class="sidebar-divider"></div>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i><span>Home</span></a>
+        <a href="library.html" class="nav-link"><i class="fa-solid fa-layer-group"></i><span>Library</span></a>
+        <a href="store.html" class="nav-link active"><i class="fa-solid fa-store"></i><span>Store</span></a>
+        <a href="wishlist.html" class="nav-link"><i class="fa-solid fa-heart"></i><span>Wishlist</span></a>
+        <a href="bootstrap.html" class="nav-link bootstrap-link"><i class="fa-brands fa-bootstrap"></i><span>Bootstrap Page</span></a>
+      </nav>
+
+      <div class="sidebar-divider"></div>
+      <nav class="nav-menu">
+        <a href="#" class="nav-link"><i class="fa-solid fa-percent"></i><span>Discount</span></a>
+        <a href="#" class="nav-link"><i class="fa-solid fa-wallet"></i><span>Wallet | $20.00</span></a>
+      </nav>
+      <div class="sidebar-divider"></div>
+      <div class="sidebar-footer">
+        <a href="#" class="nav-link"><i class="fa-solid fa-comments"></i><span>Friends & Chat</span></a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="top-bar">
+        <button class="mobile-menu-toggle" id="mobileMenuToggle"><i class="fa-solid fa-bars"></i></button>
+
+        <a href="store.html" class="btn-back">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Back to Store</span>
+        </a>
+
+        <div class="search-container">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" placeholder="Type to search" class="search-input">
+        </div>
+        
+        <div class="user-actions">
+          <button class="btn-signin" id="openAuthModalBtn"><i class="fa-solid fa-right-to-bracket"></i><span>Sign In</span></button>
+          <button class="action-btn" aria-label="Cart"></button>
+          <button class="action-btn" aria-label="Notifications"></button>
+          <div class="user-avatar" title="View Profile"></div>
+        </div>
+      </header>
+
+      <section class="game-details-hero" id="gameHero">
+        <div class="hero-overlay">
+          <div class="hero-details">
+            <h1 class="hero-title" id="gameTitle">Planet of Lana</h1>
+            <div class="tags-row" id="gameTags">
+              <span class="tag">Adventure</span>
+              <span class="tag">Puzzle</span>
+              <span class="tag">Platformer</span>
+            </div>
+          </div>
+          <div class="hero-price" id="gamePrice">$19.99</div>
+        </div>
+      </section>
+
+      <div class="game-details-grid">
+        <div class="game-main-info">
+          <section class="content-box">
+            <h2 class="box-title"><i class="fa-solid fa-circle-info"></i> About The Game</h2>
+            <p class="game-description-text" id="gameDescription">Loading description...</p>
+          </section>
+
+          <section class="content-box">
+            <h2 class="box-title"><i class="fa-solid fa-desktop"></i> System Requirements</h2>
+            <div class="sys-req-grid">
+              <div class="req-col">
+                <h4>Minimum</h4>
+                <p><strong>OS:</strong> Windows 10 64-bit</p>
+                <p><strong>Processor:</strong> Intel Core i5-2300 / AMD FX-6300</p>
+                <p><strong>Memory:</strong> 8 GB RAM</p>
+                <p><strong>Graphics:</strong> Nvidia GeForce GTX 750 Ti / AMD Radeon HD 7870</p>
+                <p><strong>Storage:</strong> 30 GB available space</p>
+              </div>
+              <div class="req-col">
+                <h4>Recommended</h4>
+                <p><strong>OS:</strong> Windows 11 64-bit</p>
+                <p><strong>Processor:</strong> Intel Core i7-8700K / AMD Ryzen 5 3600</p>
+                <p><strong>Memory:</strong> 16 GB RAM</p>
+                <p><strong>Graphics:</strong> Nvidia GeForce RTX 2060 / AMD Radeon RX 5700</p>
+                <p><strong>Storage:</strong> 30 GB SSD space</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="content-box">
+            <h2 class="box-title"><i class="fa-solid fa-comments"></i> User Reviews & Ratings</h2>
+            <div class="reviews-grid" id="gameReviewsContainer"></div>
+          </section>
+        </div>
+
+        <div class="game-sidebar-info">
+          <div class="buy-card">
+            <div class="buy-card-header">
+              <span class="buy-price" id="buyCardPrice">$19.99</span>
+              <span class="stock-status"><i class="fa-solid fa-check-circle"></i> In Stock</span>
+            </div>
+            
+            <button class="btn-buy-now" id="btnBuyNow">
+              <i class="fa-solid fa-cart-shopping"></i> Add to Cart & Buy
+            </button>
+            
+            <button class="btn-wishlist" id="btnWishlist">
+              <i class="fa-solid fa-heart"></i> Add to Wishlist
+            </button>
+
+            <div class="buy-card-divider"></div>
+
+            <div class="meta-list">
+              <div class="meta-item"><span class="meta-label">Developer</span><span class="meta-value" id="gameDeveloper">Wishfully</span></div>
+              <div class="meta-item"><span class="meta-label">Publisher</span><span class="meta-value" id="gamePublisher">Thunderful Publishing</span></div>
+              <div class="meta-item"><span class="meta-label">Release Date</span><span class="meta-value" id="gameReleaseDate">May 23, 2023</span></div>
+              <div class="meta-item"><span class="meta-label">Rating</span><span class="meta-value" id="gameRating">⭐ 4.9 / 5.0</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal-overlay" id="authModal">
+    <div class="modal-card">
+      <button class="modal-close" id="closeAuthModalBtn">&times;</button>
+      <div class="modal-header">
+        <h2>Sign In</h2>
+        <p>Welcome back! Please enter your details.</p>
+      </div>
+      <form class="auth-form" onsubmit="event.preventDefault(); alert('Signed in successfully!');">
+        <div class="form-group">
+          <label for="email"><i class="fa-solid fa-envelope"></i> Email</label>
+          <input type="email" id="email" placeholder="example@mail.com" required>
+        </div>
+        <div class="form-group">
+          <label for="password"><i class="fa-solid fa-lock"></i> Password</label>
+          <input type="password" id="password" placeholder="••••••••" required>
+        </div>
+        <div class="form-options">
+          <label><input type="checkbox"> Remember me</label>
+          <a href="#">Forgot password?</a>
+        </div>
+        <button type="submit" class="auth-submit-btn">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/game.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

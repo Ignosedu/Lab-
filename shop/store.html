@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QHOF — Store Catalog</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+  <div class="app-window">
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="logo-container">
+        <div class="logo">QHOF</div>
+        <button class="close-sidebar-btn" id="closeSidebarBtn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="sidebar-divider"></div>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i><span>Home</span></a>
+        <a href="library.html" class="nav-link"><i class="fa-solid fa-layer-group"></i><span>Library</span></a>
+        <a href="store.html" class="nav-link active"><i class="fa-solid fa-store"></i><span>Store</span></a>
+        <a href="wishlist.html" class="nav-link"><i class="fa-solid fa-heart"></i><span>Wishlist</span></a>
+        <a href="bootstrap.html" class="nav-link bootstrap-link"><i class="fa-brands fa-bootstrap"></i><span>Bootstrap Page</span></a>
+      </nav>
+
+      <div class="sidebar-divider"></div>
+      <nav class="nav-menu">
+        <a href="#" class="nav-link"><i class="fa-solid fa-percent"></i><span>Discount</span></a>
+        <a href="#" class="nav-link"><i class="fa-solid fa-wallet"></i><span>Wallet | $20.00</span></a>
+      </nav>
+      <div class="sidebar-divider"></div>
+      <div class="sidebar-footer">
+        <a href="#" class="nav-link"><i class="fa-solid fa-comments"></i><span>Friends & Chat</span></a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="top-bar">
+        <button class="mobile-menu-toggle" id="mobileMenuToggle"><i class="fa-solid fa-bars"></i></button>
+        <div class="search-container">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" placeholder="Search games in store..." class="search-input">
+        </div>
+        <div class="user-actions">
+          <button class="btn-signin" id="openAddGameModalBtn" style="display: none; background: #22c55e;">
+            <i class="fa-solid fa-plus"></i> <span>Add Game</span>
+          </button>
+          <button class="btn-signin" id="openAuthModalBtn"><i class="fa-solid fa-right-to-bracket"></i><span>Sign In</span></button>
+          <button class="action-btn" aria-label="Cart"></button>
+          <button class="action-btn" aria-label="Notifications"></button>
+          <div class="user-avatar" title="View Profile"></div>
+        </div>
+      </header>
+
+      <section class="store-header-section">
+        <h1 class="page-main-title">GAME STORE CATALOG 🎮</h1>
+        <div class="filter-bar">
+          <button class="filter-btn active">All Games</button>
+          <button class="filter-btn">Action & RPG</button>
+          <button class="filter-btn">Adventure & Puzzle</button>
+          <button class="filter-btn">Racing</button>
+          <button class="filter-btn">Special Offers %</button>
+        </div>
+      </section>
+
+      <section class="games-grid">
+        <a href="game.html?id=litn" class="game-card card-nightmares">
+          <div class="card-overlay">
+            <h3 class="game-title">Little Nightmares II</h3>
+            <div class="card-bottom">
+              <span class="game-price">$29.99</span>
+              <div class="card-actions-row">
+                <span class="btn-card-details">Details</span>
+                <button class="btn-add-cart" onclick="event.preventDefault(); event.stopPropagation(); window.globalApp.addItem('litn');">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="game.html?id=unravel" class="game-card card-unravel">
+          <div class="card-overlay">
+            <h3 class="game-title">Unravel</h3>
+            <div class="card-bottom">
+              <span class="game-price">$19.99</span>
+              <div class="card-actions-row">
+                <span class="btn-card-details">Details</span>
+                <button class="btn-add-cart" onclick="event.preventDefault(); event.stopPropagation(); window.globalApp.addItem('unravel');">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="game.html?id=forza" class="game-card card-forza">
+          <div class="card-overlay">
+            <h3 class="game-title">Forza Horizon 5</h3>
+            <div class="card-bottom">
+              <span class="game-price">$59.99</span>
+              <div class="card-actions-row">
+                <span class="btn-card-details">Details</span>
+                <button class="btn-add-cart" onclick="event.preventDefault(); event.stopPropagation(); window.globalApp.addItem('forza');">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="game.html?id=spider" class="game-card card-spider">
+          <div class="card-overlay">
+            <h3 class="game-title">Spider-Man: Miles Morales</h3>
+            <div class="card-bottom">
+              <span class="game-price">$49.99</span>
+              <div class="card-actions-row">
+                <span class="btn-card-details">Details</span>
+                <button class="btn-add-cart" onclick="event.preventDefault(); event.stopPropagation(); window.globalApp.addItem('spider');">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="game.html?id=pol" class="game-card card-pol">
+          <div class="card-overlay">
+            <h3 class="game-title">Planet of Lana</h3>
+            <div class="card-bottom">
+              <span class="game-price">$19.99</span>
+              <div class="card-actions-row">
+                <span class="btn-card-details">Details</span>
+                <button class="btn-add-cart" onclick="event.preventDefault(); event.stopPropagation(); window.globalApp.addItem('pol');">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="game.html?id=stray" class="game-card card-stray">
+          <div class="card-overlay">
+            <h3 class="game-title">Stray</h3>
+            <div class="card-bottom">
+              <span class="game-price">$29.99</span>
+              <div class="card-actions-row">
+                <span class="btn-card-details">Details</span>
+                <button class="btn-add-cart" onclick="event.preventDefault(); event.stopPropagation(); window.globalApp.addItem('stray');">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </a>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal-overlay" id="authModal">
+    <div class="modal-card">
+      <button class="modal-close" id="closeAuthModalBtn">&times;</button>
+      <div class="modal-header">
+        <h2>Sign In</h2>
+        <p>Welcome back! Please enter your details.</p>
+      </div>
+      <form class="auth-form" onsubmit="event.preventDefault(); signIn();">
+        <div class="form-group">
+          <label for="username"><i class="fa-solid fa-user"></i> Username</label>
+          <input type="text" id="username" placeholder="Enter your username" required>
+        </div>
+        <div class="form-group">
+          <label for="password"><i class="fa-solid fa-lock"></i> Password</label>
+          <input type="password" id="password" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="auth-submit-btn">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="addGameModal">
+    <div class="modal-card">
+      <button class="modal-close" id="closeAddGameModalBtn">&times;</button>
+      <div class="modal-header">
+        <h2>Add New Game</h2>
+        <p>Enter game details to save via Bearer token</p>
+      </div>
+      <form class="auth-form" id="addGameForm" onsubmit="addNewGame(event)">
+        <div class="form-group">
+          <label for="newGameName"><i class="fa-solid fa-gamepad"></i> Game Title</label>
+          <input type="text" id="newGameName" placeholder="e.g. Cyberpunk 2077" required>
+        </div>
+        <div class="form-group">
+          <label for="newGamePrice"><i class="fa-solid fa-tag"></i> Price ($)</label>
+          <input type="number" step="0.01" id="newGamePrice" placeholder="29.99" required>
+        </div>
+        <div class="form-group">
+          <label for="newGameCategory"><i class="fa-solid fa-layer-group"></i> Category</label>
+          <input type="text" id="newGameCategory" value="game" required>
+        </div>
+        <div class="form-group">
+          <label for="newGameDesc"><i class="fa-solid fa-align-left"></i> Description</label>
+          <input type="text" id="newGameDesc" placeholder="Brief game description..." required>
+        </div>
+        <button type="submit" class="auth-submit-btn" style="background: #22c55e;">Publish Game</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

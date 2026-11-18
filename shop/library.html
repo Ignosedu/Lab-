@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QHOF — My Library</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+  <div class="app-window">
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="logo-container">
+        <div class="logo">QHOF</div>
+        <button class="close-sidebar-btn" id="closeSidebarBtn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="sidebar-divider"></div>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i><span>Home</span></a>
+        <a href="library.html" class="nav-link active"><i class="fa-solid fa-layer-group"></i><span>Library</span></a>
+        <a href="store.html" class="nav-link"><i class="fa-solid fa-store"></i><span>Store</span></a>
+        <a href="wishlist.html" class="nav-link"><i class="fa-solid fa-heart"></i><span>Wishlist</span></a>
+        <a href="bootstrap.html" class="nav-link bootstrap-link"><i class="fa-brands fa-bootstrap"></i><span>Bootstrap Page</span></a>
+      </nav>
+
+      <div class="sidebar-divider"></div>
+      <nav class="nav-menu">
+        <a href="#" class="nav-link"><i class="fa-solid fa-percent"></i><span>Discount</span></a>
+        <a href="#" class="nav-link"><i class="fa-solid fa-wallet"></i><span>Wallet | $20.00</span></a>
+      </nav>
+      <div class="sidebar-divider"></div>
+      <div class="sidebar-footer">
+        <a href="#" class="nav-link"><i class="fa-solid fa-comments"></i><span>Friends & Chat</span></a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="top-bar">
+        <button class="mobile-menu-toggle" id="mobileMenuToggle"><i class="fa-solid fa-bars"></i></button>
+        <div class="search-container">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" placeholder="Search my games..." class="search-input">
+        </div>
+        <div class="user-actions">
+          <button class="btn-signin" id="openAuthModalBtn"><i class="fa-solid fa-right-to-bracket"></i><span>Sign In</span></button>
+          <button class="action-btn" aria-label="Cart"></button>
+          <button class="action-btn" aria-label="Notifications"><i class="fa-solid fa-bell"></i></button>
+          <div class="user-avatar"></div>
+        </div>
+      </header>
+
+      <section class="library-header">
+        <h1 class="page-main-title">MY GAME LIBRARY 📚</h1>
+        <p class="section-subtitle">You own 3 games in your QHOF collection</p>
+      </section>
+
+      <!-- Список придбаних ігор -->
+      <section class="library-list">
+        
+        <div class="library-item-card">
+          <img src="assets/images/pol.png" alt="Planet of Lana" class="library-thumb">
+          <div class="library-info">
+            <h3>Planet of Lana</h3>
+            <div class="library-meta">
+              <span><i class="fa-solid fa-clock"></i> 14.2 Hours Played</span>
+              <span><i class="fa-solid fa-trophy"></i> 18/22 Achievements</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: 82%;"></div>
+            </div>
+          </div>
+          <div class="library-action">
+            <button class="btn-play-game" onclick="alert('Launching Planet of Lana...')"><i class="fa-solid fa-play"></i> PLAY NOW</button>
+          </div>
+        </div>
+
+        <div class="library-item-card">
+          <img src="assets/images/forza.png" alt="Forza Horizon 5" class="library-thumb">
+          <div class="library-info">
+            <h3>Forza Horizon 5</h3>
+            <div class="library-meta">
+              <span><i class="fa-solid fa-clock"></i> 68.5 Hours Played</span>
+              <span><i class="fa-solid fa-trophy"></i> 45/50 Achievements</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: 90%;"></div>
+            </div>
+          </div>
+          <div class="library-action">
+            <button class="btn-play-game" onclick="alert('Launching Forza Horizon 5...')"><i class="fa-solid fa-play"></i> PLAY NOW</button>
+          </div>
+        </div>
+
+        <div class="library-item-card">
+          <img src="assets/images/stray.png" alt="Stray" class="library-thumb">
+          <div class="library-info">
+            <h3>Stray</h3>
+            <div class="library-meta">
+              <span><i class="fa-solid fa-clock"></i> 8.0 Hours Played</span>
+              <span><i class="fa-solid fa-trophy"></i> 12/12 Completed</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: 100%;"></div>
+            </div>
+          </div>
+          <div class="library-action">
+            <button class="btn-play-game" onclick="alert('Launching Stray...')"><i class="fa-solid fa-play"></i> PLAY NOW</button>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
